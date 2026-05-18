@@ -144,14 +144,80 @@
     font-weight: 900;
     font-display: swap;
 }
+
+/* 기본 스타일 설정 */
+body {
+    background-color: #AAFFC7; /* 배경색: 연한 민트 */
+    color: #124170;           /* 기본 텍스트: 네이비 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 p {
     font-family: 'Pretendard';
+    line-height: 1.6;
 }
+
 h1 {
     font-family: 'Paperozi';
+    color: #215B63;           /* 헤드라인: 딥 틸 */
+    margin-bottom: 10px;
 }
+
+h2 {
+    font-family: 'Paperozi';
+    border-bottom: 3px solid #67C090; /* 구분선: 중간 초록 */
+    padding-bottom: 5px;
+    color: #215B63;
+}
+
 strong {
     font-size: 32px;
+    color: #124170;
+}
+
+/* 컨테이너 및 섹션 스타일 */
+.container {
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    padding: 40px;
+    margin: 50px 0;
+    border: 2px solid #67C090;
+    border-radius: 15px; /* 약간의 둥근 모서리 */
+    box-shadow: 10px 10px 0px #67C090; /* 투박한 그림자로 초보 느낌 강조 */
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.info-list li::before {
+    content: '🌱'; /* 새싹 아이콘으로 초심자 느낌 */
+    position: absolute;
+    left: 0;
+}
+
+.project-card {
+    background-color: #f9f9f9;
+    border-left: 5px solid #215B63;
+    padding: 15px;
+    margin: 20px 0;
 }
     </style>
 </head>
@@ -159,6 +225,38 @@ strong {
     <h1>Peanutboi의 포트폴리오 웹사이트</h1>
     <p>저의 기술을 보여드리죠</p>
     <p><strong>그런건 없습니다. 이런.</strong></p>
+    <div class="container">
+        <header class="profile-section">
+            <h1>Peanutboi의 포트폴리오</h1>
+            <p><strong>"단단한 껍질 속 알찬 로직을 만드는 백엔드 개발자"</strong></p>
+            <p>안녕하세요! 아직은 배우는 단계이지만, 데이터의 흐름을 설계하는 것에 큰 매력을 느끼는 땅콩입니다.</p>
+        </header>
+
+        <section>
+            <h2>About Me</h2>
+            <ul class="info-list">
+                <li><strong>관심 분야:</strong> Java, Spring Boot, 데이터베이스 설계</li>
+                <li><strong>학습 중:</strong> 효율적인 SQL 쿼리 작성과 REST API 설계 원칙</li>
+                <li><strong>목표:</strong> 누군가에게 꼭 필요한 서비스를 안정적으로 지탱하는 개발자</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>My Journey</h2>
+            <div class="project-card">
+                <h3>📌 첫 번째 게시판 프로젝트</h3>
+                <p>가장 기본적이지만 핵심적인 CRUD를 구현하며 데이터가 어떻게 저장되고 관리되는지 직접 체득했습니다.</p>
+            </div>
+            <div class="project-card">
+                <h3>📌 알고리즘 스터디</h3>
+                <p>매일 한 문제씩 풀며 더 효율적인 코드를 작성하기 위해 고민하고 있습니다.</p>
+            </div>
+        </section>
+
+        <footer style="margin-top: 50px; text-align: center; font-size: 0.9em; color: #67C090;">
+            <p>© 2024 Peanutboi. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
 </html>
